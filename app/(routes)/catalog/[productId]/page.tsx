@@ -1,4 +1,4 @@
-import getSingleProduct from "@/actions/getSingleProductData";
+import getSingleProduct from "@/libs/actions/getSingleProductData";
 import ProductDetails from "@/components/product/product-details";
 import Reviews from "@/components/product/reviews";
 

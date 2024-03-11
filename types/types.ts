@@ -23,3 +23,19 @@ interface CartItem {
   thumbnail: string;
   quantity: number;
 }
+
+interface CreateUserParams {
+  clearkId: string;
+  firstName: string;
+  lastName: string;
+  username: string;
+  email: string;
+  photo: string;
+}
+
+interface UpdateUserParams {
+  firstName: string;
+  lastName: string;
+  username: string;
+  photo: string;
+}

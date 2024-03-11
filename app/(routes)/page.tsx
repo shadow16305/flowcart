@@ -1,4 +1,4 @@
-import getAllProducts from "@/actions/getAllProductsData";
+import getAllProducts from "@/libs/actions/getAllProductsData";
 import ProductBanner from "@/components/product-banner";
 import Container from "@/components/ui/container";
 import ProductCard from "@/components/ui/product-card";

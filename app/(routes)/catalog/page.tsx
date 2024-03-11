@@ -1,4 +1,4 @@
-import getAllProducts from "@/actions/getAllProductsData";
+import getAllProducts from "@/libs/actions/getAllProductsData";
 import CatalogBanner from "@/components/catalog/catalog-banner";
 import Products from "@/components/catalog/products";
 
