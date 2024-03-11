@@ -2,6 +2,7 @@ import { SignedIn, SignedOut } from "@clerk/nextjs";
 import Container from "../ui/container";
 import ReviewCard from "./review-card";
 import ButtonSecondary from "../ui/button-secondary";
+import Link from "next/link";
 
 const Reviews = () => {
   return (
@@ -17,7 +18,9 @@ const Reviews = () => {
             </button>
           </SignedIn>
           <SignedOut>
-            <ButtonSecondary>Sign in to add a review</ButtonSecondary>
+            <Link href="/sign-in">
+              <ButtonSecondary>Sign in to add a review</ButtonSecondary>
+            </Link>
           </SignedOut>
         </div>
         <div className="flex gap-6">
