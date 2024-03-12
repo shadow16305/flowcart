@@ -25,7 +25,7 @@ interface CartItem {
 }
 
 interface CreateUserParams {
-  clearkId: string;
+  clerkId: string;
   firstName: string;
   lastName: string;
   username: string;
