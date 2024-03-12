@@ -15,10 +15,18 @@ export const db = async () => {
 
   cached.promise =
     cached.promise ||
-    mongoose.connect(MONGODB_URI, {
-      dbName: "flowcart",
-      bufferCommands: false,
-    });
+    mongoose
+      .connect(MONGODB_URI, {
+        dbName: "flowcart",
+        bufferCommands: false,
+      })
+      .then(() => {
+        console.log("Connected to DB");
+      })
+      .catch((err) => {
+        console.error("Error connecting to DB:", err);
+        throw err;
+      });
 
   cached.conn = await cached.promise;
 
