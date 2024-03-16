@@ -37,7 +37,7 @@ const Products: React.FC<ProductsProps> = ({ items }) => {
   const paginate = (pageNumber: number) => setCurrentPage(pageNumber);
 
   return (
-    <article className="rounded-3xl bg-neutral-800 py-8">
+    <article className="bg-neutral-800 py-8">
       <Container className="flex gap-x-16 2xl:gap-x-40">
         <Filters
           selectedCategory={category}

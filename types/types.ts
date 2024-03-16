@@ -28,7 +28,6 @@ interface CreateUserParams {
   clerkId: string;
   firstName: string;
   lastName: string;
-  username: string;
   email: string;
   photo: string;
 }
@@ -36,6 +35,16 @@ interface CreateUserParams {
 interface UpdateUserParams {
   firstName: string;
   lastName: string;
-  username: string;
+  photo: string;
+}
+
+interface Reviews {
+  _id: string;
+  firstName: string;
+  lastName: string;
+  text: string;
+  clerkId: string;
+  productId: string;
+  createdAt: Date;
   photo: string;
 }

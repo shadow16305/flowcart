@@ -1,13 +1,13 @@
 "use server";
 
 import { revalidatePath } from "next/cache";
-import { db } from "@/libs/database/db";
+import { dbConnect } from "@/libs/database/db";
 import User from "../database/models/user.model";
 import { handleError } from "../utils";
 
 export const createUser = async (user: CreateUserParams) => {
   try {
-    await db();
+    await dbConnect();
     const newUser = await User.create(user);
 
     return JSON.parse(JSON.stringify(newUser));
@@ -18,7 +18,7 @@ export const createUser = async (user: CreateUserParams) => {
 
 export const updateUser = async (clerkId: string, user: UpdateUserParams) => {
   try {
-    await db();
+    await dbConnect();
     const updateUser = await User.findOneAndUpdate(
       {
         clerkId,
@@ -39,7 +39,7 @@ export const updateUser = async (clerkId: string, user: UpdateUserParams) => {
 
 export const deleteUser = async (clerkId: string) => {
   try {
-    await db();
+    await dbConnect();
     const deleteUser = await User.findOne({
       clerkId,
     });

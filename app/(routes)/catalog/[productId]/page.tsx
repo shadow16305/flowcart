@@ -16,7 +16,7 @@ const ProductPage = async ({ params }: { params: { productId: number } }) => {
         category={product.category}
         price={product.price}
       />
-      <Reviews />
+      <Reviews productId={product.id} />
     </main>
   );
 };

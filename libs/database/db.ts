@@ -4,7 +4,7 @@ const MONGODB_URI = process.env.MONGODB_URI;
 
 let cached = (global as any).mongoose || { conn: null, promise: null };
 
-export const db = async () => {
+export const dbConnect = async () => {
   if (cached.conn) {
     return cached.conn;
   }
