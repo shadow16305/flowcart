@@ -1,9 +1,11 @@
-// pages/api/comments/index.ts
 import { dbConnect } from "@/libs/database/db";
 import Comment, { CommentModel } from "@/libs/database/models/comment.model";
 import { NextApiRequest, NextApiResponse } from "next";
 
-export async function handler(req: NextApiRequest, res: NextApiResponse) {
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse,
+) {
   const { method } = req;
 
   await dbConnect();
