@@ -2,7 +2,7 @@
 
 import { ReactNode, createContext, useEffect, useState } from "react";
 
-interface CartContextType {
+interface CartContextObject {
   cartItems: CartItem[];
   addToCart: (item: CartItem) => void;
   removeFromCart: (itemId: number) => void;
@@ -10,7 +10,7 @@ interface CartContextType {
   calculateTotalPrice: () => number;
 }
 
-export const CartContext = createContext<CartContextType>({
+export const CartContext = createContext<CartContextObject>({
   cartItems: [],
   addToCart: () => {},
   removeFromCart: () => {},

@@ -38,7 +38,7 @@ const Products: React.FC<ProductsProps> = ({ items }) => {
 
   return (
     <article className="bg-neutral-800 py-8">
-      <Container className="flex gap-x-16 2xl:gap-x-40">
+      <Container className="flex flex-col gap-x-16 gap-y-8 lg:flex-row 2xl:gap-x-40">
         <Filters
           selectedCategory={category}
           setCategory={setCategory}
@@ -59,7 +59,7 @@ const Products: React.FC<ProductsProps> = ({ items }) => {
               />
             ))}
           </div>
-          {category === "" && (
+          {category === "" && maxPrice === null && minPrice === null && (
             <Pagination
               items={items}
               currentPage={currentPage}

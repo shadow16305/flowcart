@@ -15,7 +15,7 @@ const ReviewCard: React.FC<ReviewCardProps> = ({
   photo,
 }) => {
   return (
-    <div className="flex flex-col gap-y-3 rounded-2xl bg-white py-5 pl-4 pr-8 text-black lg:min-w-48 2xl:min-w-64">
+    <div className="flex min-w-full flex-col gap-y-3 rounded-2xl bg-white py-5 pl-4 pr-8 text-black lg:min-w-48 2xl:min-w-64">
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-x-4">
           {photo ? (

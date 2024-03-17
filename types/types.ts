@@ -24,6 +24,13 @@ interface CartItem {
   quantity: number;
 }
 
+interface BookmarkItem {
+  id: number;
+  title: string;
+  price: number;
+  thumbnail: string;
+}
+
 interface CreateUserParams {
   clerkId: string;
   firstName: string;

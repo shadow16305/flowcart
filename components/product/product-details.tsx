@@ -53,8 +53,8 @@ const ProductDetails: React.FC<SingleProduct> = ({
     category.charAt(0).toUpperCase() + category.slice(1);
 
   return (
-    <Container className="flex flex-col items-center justify-center rounded-2xl bg-neutral-800 py-24 lg:flex-row lg:justify-between lg:px-8">
-      <div className="flex flex-col gap-x-6 lg:flex-row">
+    <Container className="flex flex-col items-center justify-center gap-y-6 bg-neutral-800 py-12 lg:flex-row lg:justify-between lg:rounded-2xl lg:px-8 lg:py-24">
+      <div className="flex flex-col gap-x-6 gap-y-6 lg:flex-row">
         <div className="relative h-[206px] w-[320px]">
           <Image
             src={thumbnail}
@@ -79,7 +79,7 @@ const ProductDetails: React.FC<SingleProduct> = ({
           </div>
         </div>
       </div>
-      <div className="flex flex-col gap-y-3 rounded-2xl bg-white py-4 pl-6 pr-16 text-black">
+      <div className="flex flex-col items-center gap-y-3 rounded-2xl bg-white px-6 py-4 text-black lg:items-start lg:pl-6 lg:pr-16">
         <p>
           <span className="font-semibold">Price:</span> ${price}
         </p>

@@ -8,6 +8,7 @@ import { getComments, createComment } from "@/libs/actions/comments.actions";
 import ReviewCard from "./review-card";
 import ReviewModal from "./review-modal";
 import { SignedIn, SignedOut, useUser } from "@clerk/nextjs";
+import { AnimatePresence, motion } from "framer-motion";
 
 const Reviews: React.FC<{ productId: number }> = ({ productId }) => {
   const [comments, setComments] = useState<Reviews[]>([]);
@@ -50,7 +51,7 @@ const Reviews: React.FC<{ productId: number }> = ({ productId }) => {
   };
 
   return (
-    <Container className="rounded-3xl bg-neutral-800 p-8">
+    <Container className="bg-neutral-800 p-8 lg:rounded-3xl">
       <section className="space-y-6">
         <div className="flex items-center justify-between">
           <h1 className="text-[32px] font-semibold tracking-widest text-white">
@@ -85,14 +86,33 @@ const Reviews: React.FC<{ productId: number }> = ({ productId }) => {
           </p>
         )}
       </section>
-      {showModal && (
-        <ReviewModal
-          newCommentText={newCommentText}
-          setNewCommentText={setNewCommentText}
-          handleAddComment={handleAddComment}
-          closeModal={closeModal}
-        />
-      )}
+      <AnimatePresence mode="wait">
+        {showModal && (
+          <>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 0.4 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setShowModal(!showModal)}
+              className="fixed inset-0 z-30 h-screen w-screen bg-black opacity-40"
+            />
+            <motion.div
+              initial={{ opacity: 0, scale: 0 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0 }}
+              transition={{ duration: 0.2 }}
+              className="fixed inset-0 z-50 mx-auto my-auto h-fit w-fit origin-center"
+            >
+              <ReviewModal
+                newCommentText={newCommentText}
+                setNewCommentText={setNewCommentText}
+                handleAddComment={handleAddComment}
+                closeModal={closeModal}
+              />
+            </motion.div>
+          </>
+        )}
+      </AnimatePresence>
     </Container>
   );
 };

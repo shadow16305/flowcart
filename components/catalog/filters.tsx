@@ -20,7 +20,7 @@ const Filters: React.FC<FiltersProps> = ({
   setMaxPrice,
 }) => {
   return (
-    <aside className="flex h-fit flex-col rounded-2xl bg-white py-6 pl-4 pr-24">
+    <aside className="lg:min-w-none mx-auto flex h-fit w-full max-w-[91%] flex-col rounded-2xl bg-white py-6 pl-4 pr-24 lg:max-w-fit">
       <p className="text-xl font-semibold tracking-widest">Categories</p>
       <div className="mt-3 flex flex-col items-start gap-y-0.5">
         {category_items.map((category) => (
