@@ -71,7 +71,7 @@ const Reviews: React.FC<{ productId: number }> = ({ productId }) => {
           </SignedOut>
         </div>
         {comments.length > 0 ? (
-          <div className="flex gap-6">
+          <div className="flex flex-col gap-6 lg:flex-row">
             {comments.map((comment) => (
               <ReviewCard
                 key={comment.clerkId}
