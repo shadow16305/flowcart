@@ -61,7 +61,7 @@ const ProductCard: React.FC<Products> = ({ title, thumbnail, price, id }) => {
       </SignedIn>
       <Link
         href={`/catalog/${id}`}
-        className="mx-auto flex w-11/12 flex-col items-center gap-y-6 rounded-2xl bg-white pb-7 transition-all group-hover:scale-95 lg:w-60"
+        className="mx-auto flex w-11/12 flex-col items-center gap-y-6 rounded-2xl bg-white pb-7 transition-all group-hover:scale-95 lg:w-48 xl:w-56 2xl:w-60"
       >
         <div className="relative h-[186px] w-full overflow-hidden">
           <Image
