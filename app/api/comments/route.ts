@@ -2,7 +2,7 @@ import { dbConnect } from "@/libs/database/db";
 import { Request, Response } from "express";
 import Comment, { CommentModel } from "@/libs/database/models/comment.model";
 
-export default async function GET(req: Request, res: Response) {
+export async function GET(req: Request, res: Response) {
   await dbConnect();
   try {
     const { clerkId } = req.body;
