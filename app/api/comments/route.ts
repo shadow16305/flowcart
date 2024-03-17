@@ -2,7 +2,10 @@ import { dbConnect } from "@/libs/database/db";
 import Comment, { CommentModel } from "@/libs/database/models/comment.model";
 import { NextApiRequest, NextApiResponse } from "next";
 
-const handler = async (req: NextApiRequest, res: NextApiResponse) => {
+export default async function routeHandler(
+  req: NextApiRequest,
+  res: NextApiResponse,
+) {
   const { method } = req;
 
   await dbConnect();
@@ -30,6 +33,4 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
       res.setHeader("Allow", ["GET", "POST"]);
       res.status(405).end(`Method ${method} Not Allowed`);
   }
-};
-
-export default handler;
+}
