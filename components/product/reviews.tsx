@@ -9,9 +9,10 @@ import ReviewCard from "./review-card";
 import ReviewModal from "./review-modal";
 import { SignedIn, SignedOut, useUser } from "@clerk/nextjs";
 import { AnimatePresence, motion } from "framer-motion";
+import { CommentModel } from "@/libs/database/models/comment.model";
 
 const Reviews: React.FC<{ productId: number }> = ({ productId }) => {
-  const [comments, setComments] = useState<Reviews[]>([]);
+  const [comments, setComments] = useState<CommentModel[]>([]);
   const [showModal, setShowModal] = useState(false);
   const [newCommentText, setNewCommentText] = useState("");
 
@@ -32,7 +33,7 @@ const Reviews: React.FC<{ productId: number }> = ({ productId }) => {
 
   const handleAddComment = async () => {
     try {
-      await createComment(
+      const newComment = await createComment(
         newCommentText,
         productId.toString(),
         user.user?.firstName,
@@ -40,6 +41,7 @@ const Reviews: React.FC<{ productId: number }> = ({ productId }) => {
         user.user?.id,
         user.user?.imageUrl,
       );
+      setComments((prevComments) => [...prevComments, newComment]);
       closeModal();
     } catch (error) {
       console.error("Error adding comment:", error);
