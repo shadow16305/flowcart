@@ -20,7 +20,7 @@ const ReviewModal: React.FC<ReviewModalProps> = ({
         value={newCommentText}
         onChange={(e) => setNewCommentText(e.target.value)}
         placeholder="Write a review..."
-        className="w-full rounded-md border px-3 py-2 focus:outline-none"
+        className="w-full rounded-md border px-3 py-2 focus:border-amber-400 focus:outline-none focus:ring-0"
       />
       <div className="mt-4 flex gap-x-4">
         <button type="button" onClick={handleAddComment}>

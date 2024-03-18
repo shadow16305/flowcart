@@ -54,9 +54,17 @@ const Cart: React.FC<CartProps> = ({
       <p className="font-semibold">
         Total: <span className="pl-1 font-normal">${totalPrice}</span>
       </p>
-      <Link href="/checkout" className="flex justify-center">
-        <ButtonSecondary>Checkout</ButtonSecondary>
-      </Link>
+      {items!.length < 1 ? (
+        <ButtonSecondary className="w-full cursor-not-allowed text-center">
+          Checkout
+        </ButtonSecondary>
+      ) : (
+        <Link href="/checkout" className="flex justify-center">
+          <ButtonSecondary className="w-full text-center">
+            Checkout
+          </ButtonSecondary>
+        </Link>
+      )}
     </aside>
   );
 };

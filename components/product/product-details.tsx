@@ -92,7 +92,7 @@ const ProductDetails: React.FC<SingleProduct> = ({
             value={quantity}
             onChange={handleQuantityChange}
             placeholder="1"
-            className="max-w-14 rounded-lg bg-slate-200 px-2 py-1 text-center placeholder:text-black focus:outline-none"
+            className="max-w-14 rounded-lg border-none bg-slate-200 px-2 py-1 text-center placeholder:text-black focus:border-none focus:outline-none focus:ring-0"
           />
           <button
             onClick={() => setQuantity(quantity + 1)}
