@@ -1,6 +1,7 @@
 import { category_items } from "@/constants/constants";
 import clsx from "clsx";
 import { RxCross2 } from "react-icons/rx";
+import SearchBox from "../main-navigation/search-box";
 
 interface FiltersProps {
   selectedCategory: string;
@@ -9,6 +10,7 @@ interface FiltersProps {
   setMinPrice: (price: number | null) => void;
   maxPrice: number | null;
   setMaxPrice: (price: number | null) => void;
+  setSearchValue: (value: string) => void;
 }
 
 const Filters: React.FC<FiltersProps> = ({
@@ -18,10 +20,12 @@ const Filters: React.FC<FiltersProps> = ({
   setMinPrice,
   maxPrice,
   setMaxPrice,
+  setSearchValue,
 }) => {
   return (
-    <aside className="lg:min-w-none mx-auto flex h-fit w-full max-w-[91%] flex-col rounded-2xl bg-white py-6 pl-4 pr-24 lg:max-w-fit">
-      <p className="text-xl font-semibold tracking-widest">Categories</p>
+    <aside className="lg:min-w-none mx-auto flex h-fit w-full max-w-[91%] flex-col rounded-2xl bg-white py-6 pl-4 pr-16 lg:max-w-fit">
+      <SearchBox setSearchValue={setSearchValue} />
+      <p className="mt-3 text-xl font-semibold tracking-widest">Categories</p>
       <div className="mt-3 flex flex-col items-start gap-y-0.5">
         {category_items.map((category) => (
           <div

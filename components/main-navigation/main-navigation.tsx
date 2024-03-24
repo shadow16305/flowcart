@@ -1,19 +1,15 @@
 "use client";
 
 import { useContext, useEffect, useState } from "react";
-import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
-import { BsHandbag } from "react-icons/bs";
-import { FiSearch } from "react-icons/fi";
-import { TbBookmark } from "react-icons/tb";
-import ButtonPrimary from "../ui/button-primary";
 import Cart from "../cart/cart";
 import { CartContext } from "@/context/cart-context";
-import { SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
 import { usePathname } from "next/navigation";
 import { BookmarkContext } from "@/context/bookmark-context";
 import DesktopNavigation from "./desktop-navigation";
 import MobileNavigation from "./mobile-navigation";
+import { SearchContext } from "@/context/search-context";
+import SearchBox from "./search-box";
 
 const MainNavigation = () => {
   const [cartIsOpen, setCartIsOpen] = useState(false);

@@ -9,11 +9,7 @@ interface MobileMenuProps {
   onClick: () => void;
 }
 
-const MobileMenu: React.FC<MobileMenuProps> = ({
-  bookmarks,
-  cartItems,
-  onClick,
-}) => {
+const MobileMenu: React.FC<MobileMenuProps> = ({ bookmarks }) => {
   return (
     <div className="flex flex-col items-center gap-y-8 py-8">
       <div className="space-x-4 text-lg">
