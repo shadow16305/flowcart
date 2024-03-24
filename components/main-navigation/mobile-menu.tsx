@@ -23,12 +23,6 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ bookmarks }) => {
         </Link>
       </div>
       <div className="flex items-center gap-x-6">
-        <button
-          type="button"
-          className="transition hover:-translate-y-1 hover:text-amber-400"
-        >
-          <FiSearch size={24} />
-        </button>
         <Link
           href="/bookmarks"
           className="relative transition hover:-translate-y-1 hover:text-amber-400"
