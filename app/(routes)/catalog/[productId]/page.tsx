@@ -4,6 +4,7 @@ import Reviews from "@/components/product/reviews";
 
 const ProductPage = async ({ params }: { params: { productId: number } }) => {
   const product = await getSingleProduct(params.productId);
+  console.log(product);
 
   return (
     <main className="space-y-8 pt-[138px]">
