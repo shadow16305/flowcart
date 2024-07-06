@@ -2,8 +2,8 @@
 
 import React, { useContext, useState } from "react";
 import Filters from "./filters";
-import Container from "../ui/container";
-import ProductCard from "../ui/product-card";
+import Container from "../../../../components/ui/container";
+import ProductCard from "../../../../components/ui/product-card";
 import Pagination from "./pagination";
 import { SearchContext } from "@/context/search-context";
 

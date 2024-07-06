@@ -1,6 +1,6 @@
-import CheckoutBanner from "@/components/checkout/checkout-banner";
-import CheckoutForm from "@/components/checkout/checkout-form";
 import Container from "@/components/ui/container";
+import CheckoutBanner from "./_components/checkout-banner";
+import CheckoutForm from "./_components/checkout-form";
 
 const CheckoutPage = () => {
   return (

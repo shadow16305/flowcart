@@ -1,8 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import Container from "../ui/container";
-import ButtonPrimary from "../ui/button-primary";
+import Container from "../../../../../components/ui/container";
+import ButtonPrimary from "../../../../../components/ui/button-primary";
 import { ChangeEvent, useContext, useState } from "react";
 import { CartContext } from "@/context/cart-context";
 import toast from "react-hot-toast";

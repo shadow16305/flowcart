@@ -1,7 +1,7 @@
 import { category_items } from "@/constants/constants";
 import clsx from "clsx";
 import { RxCross2 } from "react-icons/rx";
-import SearchBox from "../main-navigation/search-box";
+import SearchBox from "../../../../components/main-navigation/search-box";
 
 interface FiltersProps {
   selectedCategory: string;

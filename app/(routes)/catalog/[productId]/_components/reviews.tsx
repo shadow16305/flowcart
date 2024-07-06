@@ -1,8 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Container from "../ui/container";
-import ButtonSecondary from "../ui/button-secondary";
+import Container from "../../../../../components/ui/container";
+import ButtonSecondary from "../../../../../components/ui/button-secondary";
 import Link from "next/link";
 import { getComments, createComment } from "@/libs/actions/comments.actions";
 import ReviewCard from "./review-card";

@@ -1,5 +1,5 @@
-import Bookmarks from "@/components/bookmarks/bookmarks";
-import BookmarksBanner from "@/components/bookmarks/bookmarks-banner";
+import Bookmarks from "./_components/bookmarks";
+import BookmarksBanner from "./_components/bookmarks-banner";
 
 const BookmarksPage = () => {
   return (

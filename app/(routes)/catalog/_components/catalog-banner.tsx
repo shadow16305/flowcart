@@ -1,4 +1,4 @@
-import Container from "../ui/container";
+import Container from "@/components/ui/container";
 
 const CatalogBanner = () => {
   return (

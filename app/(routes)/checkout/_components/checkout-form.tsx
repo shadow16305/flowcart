@@ -7,8 +7,8 @@ import PaymentMethod from "./payment-method";
 import ShippingInfo from "./shipping-info";
 import BillingDetails from "./billing-details";
 import { CartContext } from "@/context/cart-context";
-import CartItem from "../cart/cart-item";
-import ButtonPrimary from "../ui/button-primary";
+import CartItem from "@/components/cart/cart-item";
+import ButtonPrimary from "@/components/ui/button-primary";
 
 const CheckoutForm = () => {
   const [isCard, setIsCard] = useState(false);

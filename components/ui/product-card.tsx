@@ -6,7 +6,7 @@ import clsx from "clsx";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { BsBookmarkPlusFill } from "react-icons/bs";
 
 const ProductCard: React.FC<Products> = ({ title, thumbnail, price, id }) => {

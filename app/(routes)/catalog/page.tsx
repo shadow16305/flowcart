@@ -1,6 +1,6 @@
 import getAllProducts from "@/libs/actions/getAllProductsData";
-import CatalogBanner from "@/components/catalog/catalog-banner";
-import Products from "@/components/catalog/products";
+import Products from "@/app/(routes)/catalog/_components/products";
+import CatalogBanner from "./_components/catalog-banner";
 
 const CatalogPage = async () => {
   const products = await getAllProducts();

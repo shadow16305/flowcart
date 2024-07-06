@@ -1,10 +1,9 @@
 import getSingleProduct from "@/libs/actions/getSingleProductData";
-import ProductDetails from "@/components/product/product-details";
-import Reviews from "@/components/product/reviews";
+import ProductDetails from "@/app/(routes)/catalog/[productId]/_components/product-details";
+import Reviews from "@/app/(routes)/catalog/[productId]/_components/reviews";
 
 const ProductPage = async ({ params }: { params: { productId: number } }) => {
   const product = await getSingleProduct(params.productId);
-  console.log(product);
 
   return (
     <main className="space-y-8 pt-[138px]">

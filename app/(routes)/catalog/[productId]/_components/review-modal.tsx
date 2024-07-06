@@ -1,5 +1,5 @@
-import ButtonPrimary from "../ui/button-primary";
-import ButtonSecondary from "../ui/button-secondary";
+import ButtonPrimary from "../../../../../components/ui/button-primary";
+import ButtonSecondary from "../../../../../components/ui/button-secondary";
 
 interface ReviewModalProps {
   newCommentText: string;

@@ -8,8 +8,6 @@ import { IoIosArrowRoundForward } from "react-icons/io";
 const HomePage = async () => {
   const products = await getAllProducts();
 
-  console.log(products.slice(0, 9));
-
   return (
     <Container className="space-y-8 pt-[138px] ">
       <ProductBanner />

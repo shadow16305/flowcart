@@ -2,10 +2,10 @@
 
 import { BookmarkContext } from "@/context/bookmark-context";
 import { useContext } from "react";
-import ProductCard from "../ui/product-card";
 import Link from "next/link";
-import ButtonPrimary from "../ui/button-primary";
-import Container from "../ui/container";
+import Container from "@/components/ui/container";
+import ProductCard from "@/components/ui/product-card";
+import ButtonPrimary from "@/components/ui/button-primary";
 
 const Bookmarks = () => {
   const bookmarkCtx = useContext(BookmarkContext);
@@ -24,7 +24,7 @@ const Bookmarks = () => {
             />
           ))
         ) : (
-          <div className="flex flex-col items-center gap-y-4 text-white lg:py-44">
+          <div className="flex w-full flex-col items-center gap-y-4 text-white lg:py-44">
             <p>No bookmarks added...</p>
             <Link href="/catalog">
               <ButtonPrimary>Go to catalog</ButtonPrimary>
