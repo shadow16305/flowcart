@@ -52,14 +52,19 @@ const Cart: React.FC<CartProps> = ({
         <p className="text-neutral-600">Cart is empty...</p>
       )}
       <p className="font-semibold">
-        Total: <span className="pl-1 font-normal">${totalPrice}</span>
+        Total:{" "}
+        <span className="pl-1 font-normal">${totalPrice.toFixed(2)}</span>
       </p>
       {items!.length < 1 ? (
         <ButtonSecondary className="w-full cursor-not-allowed text-center">
           Checkout
         </ButtonSecondary>
       ) : (
-        <Link href="/checkout" className="flex justify-center">
+        <Link
+          href="/checkout"
+          className="flex justify-center"
+          onClick={onClick}
+        >
           <ButtonSecondary className="w-full text-center">
             Checkout
           </ButtonSecondary>
